@@ -10,14 +10,59 @@ GAME RULES:
 */
 
 
-var scores, roundScore, avtivePlayer, dice;
+var scores, roundScore, avtivePlayer;
 
 scores = [0,0];
 roundScore = 0;
 activePlayer = 0;
-dice = Math.floor(Math.random() * 6) + 1 // generuje randomowo cyfre pomiedzy 1 a 6.
+//dice = Math.floor(Math.random() * 6) + 1 // generuje randomowo cyfre pomiedzy 1 a 6.
     console.log(dice);
 
-// document.querySelector('#current-' + activePlayer).textContent = dice;
+document.querySelector('#current-' + activePlayer).textContent = dice;
 
-document.querySelector('#current-' + activePlayer).innerHTML = '<em> dice </em>'
+// document.querySelector('#current-' + activePlayer).innerHTML = '<em> dice </em>';
+
+var x = document.querySelector('#score-0').textContent;
+console.log(x);
+
+document.querySelector('.dice').style.display = 'none';
+/*
+function btn(){
+    //DO SOMETHING HERE
+}
+btn();
+*/
+
+
+document.querySelector('btn-roll').addEventListener('click', function(){
+
+        // Random number
+         var dice = Math.floor(Math.random() * 6) + 1
+
+        // Display the result
+
+
+        // Update the score IF the rolled number is NOT a 1.
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
