@@ -48,7 +48,7 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
         document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
         //check if player won the game
-        if(scores[activePlayer] >= 100){
+        if(scores[activePlayer] >= winningScore){
             document.querySelector('#name-' + activePlayer).textContent = 'Winner !';
             document.querySelector('.dice').style.display = 'none';
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
@@ -80,6 +80,9 @@ function nextPlayer(){
 document.querySelector('.btn-new').addEventListener('click', init)
 
 function init(){
+
+    winningScore = prompt('Input your winning score','100 for example');
+
     scores = [0, 0];
     roundScore = 0;
     activePlayer = 0;
@@ -112,6 +115,7 @@ function init(){
 
 
 
+// gracze sami ustalaja do ilu chca grac.
 
 
 
